@@ -18,7 +18,7 @@ function Event({ event, timestamp }) {
           <ArrowUp className="text-green-400" />
         )}
         <div className="text-sm text-gray-500">
-          {isClient ? "client:" : "server:"}
+          {isClient ? "クライアント:" : "サーバー:"}
           &nbsp;{event.type} | {timestamp}
         </div>
       </div>
@@ -59,7 +59,7 @@ export default function EventLog({ events }) {
   return (
     <div className="flex flex-col gap-2 overflow-x-auto">
       {events.length === 0 ? (
-        <div className="text-gray-500">Awaiting events...</div>
+        <div className="text-gray-500">イベント待機中...</div>
       ) : (
         eventsToDisplay
       )}

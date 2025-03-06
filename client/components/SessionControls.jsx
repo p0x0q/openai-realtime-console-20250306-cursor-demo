@@ -19,7 +19,7 @@ function SessionStopped({ startSession }) {
         className={isActivating ? "bg-gray-600" : "bg-red-600"}
         icon={<CloudLightning height={16} />}
       >
-        {isActivating ? "starting session..." : "start session"}
+        {isActivating ? "セッション開始中..." : "セッションを開始"}
       </Button>
     </div>
   );
@@ -42,7 +42,7 @@ function SessionActive({ stopSession, sendTextMessage }) {
           }
         }}
         type="text"
-        placeholder="send a text message..."
+        placeholder="テキストメッセージを送信..."
         className="border border-gray-200 rounded-full p-4 flex-1"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
@@ -56,10 +56,10 @@ function SessionActive({ stopSession, sendTextMessage }) {
         icon={<MessageSquare height={16} />}
         className="bg-blue-400"
       >
-        send text
+        送信
       </Button>
       <Button onClick={stopSession} icon={<CloudOff height={16} />}>
-        disconnect
+        切断
       </Button>
     </div>
   );

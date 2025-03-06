@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const functionDescription = `
-Call this function when a user asks for a color palette.
+ユーザーがカラーパレットを要求した時にこの関数を呼び出してください。
 `;
 
 const sessionUpdate = {
@@ -54,7 +54,7 @@ function FunctionCallOutput({ functionCallOutput }) {
 
   return (
     <div className="flex flex-col gap-2">
-      <p>Theme: {theme}</p>
+      <p>テーマ: {theme}</p>
       {colorBoxes}
       <pre className="text-xs bg-gray-100 rounded-md p-2 overflow-x-auto">
         {JSON.stringify(functionCallOutput, null, 2)}
@@ -96,8 +96,8 @@ export default function ToolPanel({
               type: "response.create",
               response: {
                 instructions: `
-                ask for feedback about the color palette - don't repeat 
-                the colors, just ask if they like the colors.
+                カラーパレットについてのフィードバックを求めてください - 
+                色を繰り返さずに、ただ色が気に入ったかどうか尋ねてください。
               `,
               },
             });
@@ -117,15 +117,15 @@ export default function ToolPanel({
   return (
     <section className="h-full w-full flex flex-col gap-4">
       <div className="h-full bg-gray-50 rounded-md p-4">
-        <h2 className="text-lg font-bold">Color Palette Tool</h2>
+        <h2 className="text-lg font-bold">カラーパレットツール</h2>
         {isSessionActive ? (
           functionCallOutput ? (
             <FunctionCallOutput functionCallOutput={functionCallOutput} />
           ) : (
-            <p>Ask for advice on a color palette...</p>
+            <p>カラーパレットのアドバイスを求めてください...</p>
           )
         ) : (
-          <p>Start the session to use this tool...</p>
+          <p>このツールを使用するにはセッションを開始してください...</p>
         )}
       </div>
     </section>
