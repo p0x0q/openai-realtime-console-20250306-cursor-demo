@@ -2,6 +2,10 @@
 
 This is an example application showing how to use the [OpenAI Realtime API](https://platform.openai.com/docs/guides/realtime) with [WebRTC](https://platform.openai.com/docs/guides/realtime-webrtc).
 
+## 概要
+
+これは[OpenAI Realtime API](https://platform.openai.com/docs/guides/realtime)を[WebRTC](https://platform.openai.com/docs/guides/realtime-webrtc)と共に使用するサンプルアプリケーションです。
+
 ## Installation and usage
 
 Before you begin, you'll need an OpenAI API key - [create one in the dashboard here](https://platform.openai.com/settings/api-keys). Create a `.env` file from the example file and set your API key in there:
